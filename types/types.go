@@ -1,26 +1,26 @@
 package types
 
 type Experience struct {
-	Designation string
-	Duration    string
-	Company     string
-	Location    string
-	Description []string
+	Designation string   `json:"designation"`
+	Duration    string   `json:"duration"`
+	Company     string   `json:"company"`
+	Location    string   `json:"location"`
+	Description []string `json:"description"`
 }
 
 type Education struct {
-	Instituition string
-	Location     string
-	Degree       string
-	Duration     string
+	Instituition string `json:"instituition"`
+	Location     string `json:"location"`
+	Degree       string `json:"degree"`
+	Duration     string `json:"duration"`
 }
 
 type Project struct {
-	Name        string
-	Href        string
-	TechStack   string
-	SourceCode  string
-	Description []string
+	Name        string   `json:"name"`
+	Href        string   `json:"href"`
+	TechStack   string   `json:"techstack"`
+	SourceCode  string   `json:"sourcehref"`
+	Description []string `json:"description"`
 }
 
 type Resume interface {
@@ -84,15 +84,15 @@ func (r MyResume) GetProjects() []Project {
 }
 
 type MyResume struct {
-	Name        string
-	Location    string
-	Email       string
-	Mobile      string
-	Summary     string
-	Designation string
-	Contact     map[string]string
-	Skills      map[string]string
-	Experience  []Experience
-	Education   []Education
-	Projects    []Project
+	Name        string            `json:"name"`
+	Location    string            `json:"location"`
+	Email       string            `json:"email"`
+	Mobile      string            `json:"mobile"`
+	Summary     string            `json:"summary"`
+	Designation string            `json:"designation"`
+	Contact     map[string]string `json:"contact"`
+	Skills      map[string]string `json:"skills"`
+	Experience  []Experience      `json:"experience"`
+	Education   []Education       `json:"education"`
+	Projects    []Project         `json:"projects"`
 }
